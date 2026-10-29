@@ -1,0 +1,132 @@
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 4px;
+}
+
+.write-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  margin: 20px 0 32px;
+}
+
+.write-box textarea {
+  min-height: 140px;
+  padding: 12px;
+  font: inherit;
+  border: 1.5px solid #d5d9e8;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+.write-box button {
+  align-self: flex-end;
+  background: var(--accent);
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.story {
+  background: white;
+  padding: 16px 18px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.empty {
+  color: var(--muted);
+}
+
+.search {
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  border: 1.5px solid #d5d9e8;
+  border-radius: 10px;
+  margin: 12px 0 20px;
+}
+
+.country-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.country-list li {
+  display: flex;
+}
+
+.country-list a {
+  flex: 1;
+  background: white;
+  padding: 14px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.country-list a:hover,
+.country-list a:focus-visible {
+  outline: 2px solid var(--accent);
+}
+
+.write-box select,
+.write-box input[type='text'] {
+  padding: 10px;
+  font: inherit;
+  border: 1.5px solid #d5d9e8;
+  border-radius: 10px;
+  background: white;
+}
+
+.topic-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border: 1px solid #d5d9e8;
+  border-radius: 999px;
+  padding: 2px 12px;
+  margin-bottom: 8px;
+}
+.topic-title {
+  margin: 4px 0 0;
+  font-weight: 600;
+}
+
+.topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: white;
+  color: var(--ink);
+  border: 1.5px solid #d5d9e8;
+  border-radius: 999px;
+  padding: 7px 16px;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--ink);
+}
+
+.chip-on {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}

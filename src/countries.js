@@ -1,0 +1,61 @@
+export const countries = [
+  // Africa
+  ["الجزائر (Algeria)", "dz"], ["Bénin (Benin)", "bj"], ["Botswana", "bw"], ["Burkina Faso", "bf"],
+  ["Burundi", "bi"], ["Cabo Verde (Cape Verde)", "cv"], ["Côte d'Ivoire (Ivory Coast)", "ci"], ["جيبوتي (Djibouti)", "dj"],
+  ["eSwatini (Eswatini, Swaziland)", "sz"], ["Gabon", "ga"], ["Gambia", "gm"], ["Ghana", "gh"],
+  ["Kenya", "ke"], ["Liberia", "lr"], ["Madagasikara (Madagascar)", "mg"], ["Malawi", "mw"],
+  ["موريتانيا (Mauritania)", "mr"], ["Maurice (Mauritius)", "mu"], ["Mayotte", "yt"], ["المغرب (Morocco)", "ma"],
+  ["Moçambique (Mozambique)", "mz"], ["Namibia", "na"], ["Niger", "ne"], ["Nigeria", "ng"],
+  ["La Réunion (Réunion)", "re"], ["Rwanda", "rw"], ["Seychelles", "sc"], ["Sierra Leone", "sl"],
+  ["South Africa", "za"], ["Tanzania", "tz"], ["Togo", "tg"], ["تونس (Tunisia)", "tn"],
+  ["Uganda", "ug"], ["Zambia", "zm"], ["Zimbabwe", "zw"],
+
+  // Americas
+  ["Antigua and Barbuda", "ag"], ["Argentina", "ar"], ["Aruba", "aw"], ["Bahamas", "bs"],
+  ["Barbados", "bb"], ["Bermuda", "bm"], ["Bolivia", "bo"], ["Brasil (Brazil)", "br"],
+  ["Canada", "ca"], ["Cayman Islands", "ky"], ["Chile", "cl"], ["Colombia", "co"],
+  ["Costa Rica", "cr"], ["Cuba", "cu"], ["Curaçao", "cw"], ["Dominica", "dm"],
+  ["República Dominicana (Dominican Republic)", "do"], ["Ecuador", "ec"], ["El Salvador", "sv"],
+  ["Guyane française (French Guiana)", "gf"], ["Kalaallit Nunaat (Greenland)", "gl"], ["Grenada", "gd"], ["Guadeloupe", "gp"],
+  ["Guatemala", "gt"], ["Guyana", "gy"], ["Haïti (Haiti)", "ht"], ["Honduras", "hn"],
+  ["Jamaica", "jm"], ["Martinique", "mq"], ["México (Mexico)", "mx"], ["Nicaragua", "ni"],
+  ["Panamá (Panama)", "pa"], ["Paraguay", "py"], ["Perú (Peru)", "pe"], ["Puerto Rico", "pr"],
+  ["Saint Lucia", "lc"], ["Trinidad and Tobago", "tt"], ["United States", "us"],
+  ["Uruguay", "uy"], ["Venezuela", "ve"],
+
+  // Asia
+  ["Հայաստան (Armenia)", "am"], ["Azərbaycan (Azerbaijan)", "az"], ["البحرين (Bahrain)", "bh"], ["বাংলাদেশ (Bangladesh)", "bd"],
+  ["འབྲུག་ཡུལ། (Bhutan)", "bt"], ["Brunei Darussalam", "bn"], ["កម្ពុជា (Cambodia)", "kh"], ["中国 (China)", "cn"],
+  ["Κύπρος / Kıbrıs (Cyprus)", "cy"], ["საქართველო (Georgia)", "ge"], ["香港 (Hong Kong)", "hk"], ["भारत (India)", "in"],
+  ["Indonesia", "id"], ["ایران (Iran)", "ir"], ["العراق (Iraq)", "iq"], ["ישראל (Israel)", "il"],
+  ["日本 (Japan)", "jp"], ["الأردن (Jordan)", "jo"], ["Қазақстан (Kazakhstan)", "kz"], ["الكويت (Kuwait)", "kw"],
+  ["Кыргызстан (Kyrgyzstan)", "kg"], ["ລາວ (Laos, Lao People's Democratic Republic)", "la"], ["لبنان (Lebanon)", "lb"],
+  ["澳門 (Macao)", "mo"], ["Malaysia", "my"], ["ދިވެހިރާއްޖެ (Maldives)", "mv"], ["Монгол улс (Mongolia)", "mn"],
+  ["မြန်မာ (Myanmar, Burma)", "mm"], ["नेपाल (Nepal)", "np"], ["عُمان (Oman)", "om"], ["پاکستان (Pakistan)", "pk"],
+  ["فلسطين (Palestine, State of)", "ps"], ["Pilipinas (Philippines)", "ph"], ["قطر (Qatar)", "qa"],
+  ["Singapore", "sg"], ["대한민국 (South Korea)", "kr"], ["ශ්‍රී ලංකාව / இலங்கை (Sri Lanka)", "lk"], ["臺灣 (Taiwan)", "tw"],
+  ["ประเทศไทย (Thailand)", "th"], ["Timor-Leste", "tl"], ["Türkiye (Turkey)", "tr"], ["Türkmenistan (Turkmenistan)", "tm"],
+  ["الإمارات العربية المتحدة (United Arab Emirates)", "ae"], ["Việt Nam (Vietnam)", "vn"], ["اليمن (Yemen)", "ye"],
+
+  // Europe
+  ["Shqipëri (Albania)", "al"], ["Andorra", "ad"], ["Österreich (Austria)", "at"], ["Беларусь (Belarus)", "by"],
+  ["België / Belgique (Belgium)", "be"], ["Bosna i Hercegovina (Bosnia and Herzegovina)", "ba"], ["България (Bulgaria)", "bg"],
+  ["Hrvatska (Croatia)", "hr"], ["Česko (Czechia)", "cz"], ["Danmark (Denmark)", "dk"], ["England", "gb-eng"],
+  ["Eesti (Estonia)", "ee"], ["Føroyar (Faroe Islands)", "fo"], ["Suomi (Finland)", "fi"], ["France", "fr"],
+  ["Deutschland (Germany)", "de"], ["Gibraltar", "gi"], ["Ελλάδα (Greece)", "gr"], ["Guernsey", "gg"],
+  ["Magyarország (Hungary)", "hu"], ["Ísland (Iceland)", "is"], ["Éire (Ireland)", "ie"], ["Isle of Man", "im"],
+  ["Italia (Italy)", "it"], ["Jersey", "je"], ["Kosovë / Косово (Kosovo)", "xk"], ["Latvija (Latvia)", "lv"],
+  ["Liechtenstein", "li"], ["Lietuva (Lithuania)", "lt"], ["Lëtzebuerg (Luxembourg)", "lu"], ["Malta", "mt"],
+  ["Moldova", "md"], ["Monaco", "mc"], ["Crna Gora (Montenegro)", "me"], ["Nederland (Netherlands)", "nl"],
+  ["Северна Македонија (North Macedonia)", "mk"], ["Northern Ireland", "gb-nir"], ["Norge (Norway)", "no"],
+  ["Polska (Poland)", "pl"], ["Portugal", "pt"], ["România (Romania)", "ro"], ["Россия (Russian Federation, Russia)", "ru"],
+  ["Scotland", "gb-sct"], ["Србија (Serbia)", "rs"], ["Slovensko (Slovakia)", "sk"], ["Slovenija (Slovenia)", "si"],
+  ["España (Spain)", "es"], ["Sverige (Sweden)", "se"], ["Schweiz / Suisse / Svizzera (Switzerland)", "ch"], ["Україна (Ukraine)", "ua"],
+  ["United Kingdom", "gb"], ["Cymru (Wales)", "gb-wls"],
+
+  // Oceania
+  ["Australia", "au"], ["Fiji", "fj"], ["Guam", "gu"], ["Kiribati", "ki"],
+  ["Nauru", "nr"], ["Nouvelle-Calédonie (New Caledonia)", "nc"], ["Aotearoa (New Zealand)", "nz"],
+  ["Papua New Guinea", "pg"], ["Samoa", "ws"], ["Solomon Islands", "sb"],
+  ["Tonga", "to"], ["Vanuatu", "vu"],
+]

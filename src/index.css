@@ -1,0 +1,24 @@
+:root {
+  --bg: #eef0f6;
+  --ink: #1b2340;
+  --muted: #56608a;
+  --accent: #f2b84b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
