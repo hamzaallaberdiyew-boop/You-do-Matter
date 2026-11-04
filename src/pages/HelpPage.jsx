@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { countries } from '../countries'
+import './HelpPage.css'
 
 function HelpPage() {
   const [search, setSearch] = useState('')
@@ -11,7 +12,6 @@ function HelpPage() {
 
   return (
     <main>
-      <Link to="/">← Back</Link>
       <h1>Find help</h1>
       <p>Choose your country. Helplines are free and confidential.</p>
 

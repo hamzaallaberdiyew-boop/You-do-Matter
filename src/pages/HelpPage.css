@@ -1,0 +1,35 @@
+.search {
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  border: 1.5px solid #d5d9e8;
+  border-radius: 10px;
+  margin: 12px 0 20px;
+}
+
+.country-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.country-list li {
+  display: flex;
+}
+
+.country-list a {
+  flex: 1;
+  background: white;
+  padding: 14px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.country-list a:hover,
+.country-list a:focus-visible {
+  outline: 2px solid var(--accent);
+}

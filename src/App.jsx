@@ -1,51 +1,46 @@
 import { useState, useEffect } from 'react'
-import './App.css'
+import { Routes, Route } from 'react-router-dom'
 import { supabase } from './supabase'
-import WriteBox from './components/WriteBox'
-import StoryList from './components/StoryList'
-import HelpBox from './components/HelpBox'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
+import HelpPage from './pages/HelpPage'
+import RulesPage from './pages/RulesPage'
+import ProfilePage from './pages/ProfilePage'
+import AboutPage from './pages/AboutPage'
+import SupportPage from './pages/SupportPage'
+import AuthPage from './pages/AuthPage'
 
 function App() {
-  const [stories, setStories] = useState([])
-
-  async function loadStories() {
-    const { data, error } = await supabase
-      .from('stories')
-      .select('*')
-      .order('created_at', { ascending: false })
-
-    if (error) {
-      console.log(error)
-      return
-    }
-    setStories(data)
-  }
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
-    loadStories()
+    supabase.auth.getSession().then(({ data }) => {
+      setUser(data.session?.user ?? null)
+    })
+
+    const { data } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null)
+    })
+
+    return () => data.subscription.unsubscribe()
   }, [])
 
-  async function addStory(text, topic) {
-  const { error } = await supabase
-    .from('stories')
-    .insert({ text: text, topic: topic })
-
-  if (error) {
-    console.log(error)
-    return
-  }
-
-  loadStories()
-}
-
   return (
-    <main>
-      <h1>You do matter</h1>
-      <p>Write what's on your mind. You are not alone.</p>
-      <HelpBox />
-      <WriteBox onShare={addStory} />
-      <StoryList stories={stories} />
-    </main>
+    <>
+      <Navbar user={user} />
+      <Routes>
+        <Route path="/" element={<HomePage user={user} />} />
+        <Route path="/help" element={<HelpPage />} />
+        <Route path="/rules" element={<RulesPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/support" element={<SupportPage />} />
+        <Route path="/signin" element={<AuthPage mode="signin" />} />
+        <Route path="/signup" element={<AuthPage mode="signup" />} />
+        <Route path="/profile" element={<ProfilePage user={user} />} />
+      </Routes>
+      <Footer />
+    </>
   )
 }
 

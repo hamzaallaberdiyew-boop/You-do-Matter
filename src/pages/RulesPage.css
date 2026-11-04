@@ -1,0 +1,10 @@
+.rules-list {
+  background: white;
+  border-radius: 14px;
+  padding: 20px 20px 20px 44px;
+  margin: 20px 0;
+}
+
+.rules-list li {
+  margin-bottom: 12px;
+}

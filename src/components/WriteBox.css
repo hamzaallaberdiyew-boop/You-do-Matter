@@ -1,0 +1,129 @@
+.write-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  margin: 20px 0 32px;
+}
+
+.write-box textarea {
+  min-height: 140px;
+  padding: 12px;
+  font: inherit;
+  border: 1.5px solid #d5d9e8;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+.write-box input[type='text'] {
+  padding: 10px;
+  font: inherit;
+  border: 1.5px solid #d5d9e8;
+  border-radius: 10px;
+  background: white;
+}
+
+.write-box button[type='submit'] {
+  align-self: flex-end;
+  background: var(--accent);
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.topic-title {
+  margin: 4px 0 0;
+  font-weight: 600;
+}
+
+.topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: white;
+  color: var(--ink);
+  border: 1.5px solid #d5d9e8;
+  border-radius: 999px;
+  padding: 7px 16px;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--ink);
+}
+
+.chip-on {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+
+.name-choice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.care-box {
+  background: white;
+  border-left: 5px solid var(--accent);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+}
+
+.care-box h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.care-box p {
+  margin: 0 0 12px;
+}
+
+.care-box ul {
+  margin: 0 0 14px;
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+.care-box a {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.care-small {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.care-box > button {
+  background: none;
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  padding: 8px 20px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.care-box > button:hover {
+  background: var(--ink);
+  color: white;
+}

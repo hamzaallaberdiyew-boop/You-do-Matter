@@ -1,0 +1,37 @@
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  background: white;
+}
+
+.nav-links a.active {
+  background: var(--ink);
+  color: white;
+}

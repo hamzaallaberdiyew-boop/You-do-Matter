@@ -1,0 +1,32 @@
+.profile-note {
+  color: var(--muted);
+}
+
+.profile-stats {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.profile-stats div {
+  background: white;
+  border-radius: 14px;
+  padding: 14px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-stats strong {
+  font-size: 1.8rem;
+}
+
+.profile-stats span {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.profile-counts {
+  color: var(--muted);
+  margin: 0;
+}

@@ -1,0 +1,29 @@
+.reaction-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.reaction {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  color: var(--ink);
+  border: 1.5px solid #d5d9e8;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.reaction:hover {
+  border-color: var(--ink);
+}
+
+.reaction-on {
+  background: var(--accent);
+  border-color: var(--accent);
+}

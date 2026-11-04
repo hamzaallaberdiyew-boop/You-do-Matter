@@ -1,0 +1,33 @@
+.footer {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 24px;
+  border-top: 1px solid #d5d9e8;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  margin-bottom: 8px;
+}
