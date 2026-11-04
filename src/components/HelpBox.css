@@ -1,5 +1,5 @@
 .help-box {
-  background: white;
+  background: var(--card);
   border-left: 5px solid var(--accent);
   border-radius: 10px;
   padding: 14px 18px;

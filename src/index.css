@@ -1,10 +1,3 @@
-:root {
-  --bg: #eef0f6;
-  --ink: #1b2340;
-  --muted: #56608a;
-  --accent: #f2b84b;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -27,4 +20,34 @@ main {
 h1 {
   font-size: 2.4rem;
   margin-bottom: 4px;
+}
+
+:root {
+  --bg: #eef0f6;
+  --card: #ffffff;
+  --ink: #1b2340;
+  --muted: #56608a;
+  --line: #d5d9e8;
+  --accent: #f2b84b;
+  --on-ink: #ffffff;
+}
+
+[data-theme='dark'] {
+  --bg: #1e1e1e;
+  --card: #2a2a2a;
+  --ink: #ececec;
+  --muted: #a0a0a0;
+  --line: #444444;
+  --accent: #f2b84b;
+  --on-ink: #1e1e1e;
+}
+
+a {
+  color: var(--ink);
+}
+
+input,
+textarea {
+  background: var(--card);
+  color: var(--ink);
 }

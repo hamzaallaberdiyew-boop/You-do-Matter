@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import './Navbar.css'
+import ThemeToggle from './ThemeToggle'
 
 function Navbar() {
   return (
@@ -10,6 +11,7 @@ function Navbar() {
         <NavLink to="/help">Help</NavLink>
         <NavLink to="/rules">Rules</NavLink>
         <NavLink to="/profile">Profile</NavLink>
+        <ThemeToggle />
       </div>
     </nav>
   )

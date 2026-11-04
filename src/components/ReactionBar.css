@@ -3,15 +3,16 @@
   flex-wrap: wrap;
   gap: 4px;
   margin-top: 12px;
+
 }
 
 .reaction {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: white;
+  background: var(--card);
   color: var(--ink);
-  border: 1.5px solid #d5d9e8;
+  border: 1.5px solid var(--line);
   border-radius: 999px;
   padding: 5px 14px;
   font: inherit;
@@ -26,4 +27,5 @@
 .reaction-on {
   background: var(--accent);
   border-color: var(--accent);
+  color: #1b2340;
 }

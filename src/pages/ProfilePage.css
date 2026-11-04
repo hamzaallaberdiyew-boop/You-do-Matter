@@ -9,7 +9,7 @@
 }
 
 .profile-stats div {
-  background: white;
+  background: var(--card);
   border-radius: 14px;
   padding: 14px 24px;
   display: flex;

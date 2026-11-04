@@ -2,7 +2,7 @@
   max-width: 1100px;
   margin: 40px auto 0;
   padding: 24px;
-  border-top: 1px solid #d5d9e8;
+  border-top: 1px solid var(--line);
   text-align: center;
   color: var(--muted);
   font-size: 0.95rem;

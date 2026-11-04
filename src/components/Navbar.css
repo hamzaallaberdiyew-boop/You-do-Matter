@@ -28,10 +28,19 @@
 }
 
 .nav-links a:hover {
-  background: white;
+  background: var(--card);
 }
 
 .nav-links a.active {
   background: var(--ink);
-  color: white;
+  color: var(--on-ink);
+}
+
+.theme-toggle {
+  background: none;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 1rem;
+  cursor: pointer;
 }

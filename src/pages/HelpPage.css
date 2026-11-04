@@ -2,7 +2,7 @@
   width: 100%;
   padding: 12px;
   font: inherit;
-  border: 1.5px solid #d5d9e8;
+  border: 1.5px solid var(--line);
   border-radius: 10px;
   margin: 12px 0 20px;
 }
@@ -21,7 +21,7 @@
 
 .country-list a {
   flex: 1;
-  background: white;
+  background: var(--card);
   padding: 14px 16px;
   border-radius: 10px;
   text-decoration: none;
