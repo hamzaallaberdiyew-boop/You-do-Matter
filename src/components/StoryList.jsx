@@ -32,8 +32,11 @@ function formatDate(isoString) {
   })
 }
 
-function StoryList({ stories, onReact }) {
+function StoryList({ stories, onReact, isAdmin }) {
   const [filter, setFilter] = useState('All')
+  const [reported, setReported] = useState(() =>
+  JSON.parse(localStorage.getItem('reportedStories') || '[]')
+)
 
   const myStories = getMyStories()
 
@@ -53,6 +56,23 @@ function StoryList({ stories, onReact }) {
 
   removeMyStory(id)
   onReact()
+}
+
+async function reportStory(id) {
+  if (reported.includes(id)) return
+
+  const updated = [...reported, id]
+  setReported(updated)
+  localStorage.setItem('reportedStories', JSON.stringify(updated))
+
+  const { error } = await supabase.rpc('report_story', { target_id: id })
+
+  if (error) {
+    console.log(error)
+    const undone = updated.filter((x) => x !== id)
+    setReported(undone)
+    localStorage.setItem('reportedStories', JSON.stringify(undone))
+  }
 }
 
   if (stories.length === 0) {
@@ -92,7 +112,7 @@ function StoryList({ stories, onReact }) {
              <span className="story-meta">
                 <span className="story-author">{s.author_name || 'Anonymous'}</span>
                 <span className="story-date">{formatDate(s.created_at)}</span>
-                {myStories.includes(s.id) && (
+                {(myStories.includes(s.id) || isAdmin) && (
                 <button
                     type="button"
                     className="trash-btn"
@@ -108,7 +128,16 @@ function StoryList({ stories, onReact }) {
             </span>
             </div>
           <p>{s.text}</p>
-          <ReactionBar story={s} onReact={onReact} />
+          <div className="story-bottom">
+            <ReactionBar story={s} onReact={onReact} />
+            {reported.includes(s.id) ? (
+                <span className="reported">Thank you, we will look at it.</span>
+            ) : (
+                <button type="button" className="report-btn" onClick={() => reportStory(s.id)}>
+                Report
+                </button>
+            )}
+        </div>
         </article>
       ))}
     </section>

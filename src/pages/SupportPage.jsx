@@ -17,7 +17,7 @@ function SupportPage() {
         should not be here? Write to us:
       </p>
       <p>
-        <a href="mailto:your-email@example.com">your-email@example.com</a>
+        <a href="mailto:youdomatter.help@gmail.com">youdomatter.help@gmail.com</a>
       </p>
     </main>
   )

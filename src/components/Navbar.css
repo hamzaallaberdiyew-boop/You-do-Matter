@@ -44,3 +44,19 @@
   font-size: 1rem;
   cursor: pointer;
 }
+
+.nav-signout {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-signout:hover {
+  background: var(--ink);
+  color: var(--on-ink);
+}

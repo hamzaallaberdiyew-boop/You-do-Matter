@@ -1,0 +1,30 @@
+.admin-note {
+  color: var(--muted);
+}
+
+.admin-count {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.admin-actions button {
+  background: none;
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  padding: 6px 16px;
+  font: inherit;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.admin-actions .admin-hide {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1b2340;
+}

@@ -5,7 +5,7 @@ import WriteBox from '../components/WriteBox'
 import StoryList from '../components/StoryList'
 import HelpBox from '../components/HelpBox'
 
-function HomePage({ user }) {
+function HomePage({ user, isAdmin }) {
   const [stories, setStories] = useState([])
   const [username, setUsername] = useState(null)
 
@@ -75,7 +75,7 @@ function HomePage({ user }) {
       <p>Write what's on your mind. You are not alone.</p>
       <HelpBox />
       <WriteBox onShare={addStory} user={user} username={username} />
-      <StoryList stories={stories} onReact={loadStories} />
+      <StoryList stories={stories} onReact={loadStories} isAdmin={isAdmin} />
     </main>
   )
 }

@@ -10,9 +10,11 @@ import ProfilePage from './pages/ProfilePage'
 import AboutPage from './pages/AboutPage'
 import SupportPage from './pages/SupportPage'
 import AuthPage from './pages/AuthPage'
+import AdminPage from './pages/AdminPage'
 
 function App() {
   const [user, setUser] = useState(null)
+  const [isAdmin, setIsAdmin] = useState(false)
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -26,11 +28,25 @@ function App() {
     return () => data.subscription.unsubscribe()
   }, [])
 
+    useEffect(() => {
+  async function checkAdmin() {
+    if (!user) {
+      setIsAdmin(false)
+      return
+    }
+
+    const { data } = await supabase.rpc('is_admin')
+    setIsAdmin(data === true)
+  }
+
+  checkAdmin()
+}, [user])
+
   return (
     <>
-      <Navbar user={user} />
+      <Navbar user={user} isAdmin={isAdmin} />
       <Routes>
-        <Route path="/" element={<HomePage user={user} />} />
+        <Route path="/" element={<HomePage user={user} isAdmin={isAdmin} />} />
         <Route path="/help" element={<HelpPage />} />
         <Route path="/rules" element={<RulesPage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -38,6 +54,7 @@ function App() {
         <Route path="/signin" element={<AuthPage mode="signin" />} />
         <Route path="/signup" element={<AuthPage mode="signup" />} />
         <Route path="/profile" element={<ProfilePage user={user} />} />
+        <Route path="/admin" element={<AdminPage user={user} />} />
       </Routes>
       <Footer />
     </>
