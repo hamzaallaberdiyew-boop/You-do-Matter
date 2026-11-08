@@ -44,10 +44,17 @@ function StoryList({ stories, onReact, isAdmin }) {
   const sure = window.confirm('Delete this story? This cannot be undone.')
   if (!sure) return
 
-  const { error } = await supabase.rpc('delete_my_story', {
-    story_id: id,
-    token: getToken(),
-  })
+  let error
+  if (isAdmin) {
+    const result = await supabase.from('stories').delete().eq('id', id)
+    error = result.error
+  } else {
+    const result = await supabase.rpc('delete_my_story', {
+      story_id: id,
+      token: getToken(),
+    })
+    error = result.error
+  }
 
   if (error) {
     console.log(error)
